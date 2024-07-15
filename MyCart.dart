@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 class Mycart extends StatefulWidget {
@@ -31,13 +32,13 @@ class _MycartState extends State<Mycart> {
             SizedBox(width: 30.0,),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.only(top: 20,left: 20,right: 20),
                 child: ListView(
                   children: [
                     Container(
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12.0),
-                        border: Border.all(color: Colors.red.shade100)
+                          borderRadius: BorderRadius.circular(12.0),
+                          border: Border.all(color: Colors.grey.shade300)
                       ),
                       width: MediaQuery.of(context).size.width,
                       height:140.0,
@@ -46,13 +47,13 @@ class _MycartState extends State<Mycart> {
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                              color: Colors.red.shade50,
-                                borderRadius: BorderRadius.circular(10.0),
-                                // border: Border.all(color: Colors.pinkAccent.shade100)
+                              color: Colors.grey.shade300,
+                              borderRadius: BorderRadius.circular(10.0),
+                              // border: Border.all(color: Colors.pinkAccent.shade100)
                             ),
                             width: 100.0,
                             height: 100.0,
-                            child: Image.asset("img/iphone_13.PNG27.png"),
+                            child: Image.asset("img/iphone13.png"),
                           ),
                           SizedBox(width: 10,),
                           Padding(
@@ -69,7 +70,7 @@ class _MycartState extends State<Mycart> {
                                       Icon(Icons.close,color: Colors.grey,)
                                     ],
                                   ),
-                                  Text("Apple",style: TextStyle(color: Colors.pinkAccent.shade100),),
+                                  Text("Apple",style: TextStyle(color: Colors.grey.shade500),),
                                   SizedBox(height: 20.0,),
                                   Row(
 
@@ -90,7 +91,7 @@ class _MycartState extends State<Mycart> {
                                               height: 30.0,
                                               decoration: BoxDecoration(
                                                   borderRadius: BorderRadius.circular(8.0),
-                                                  border: Border.all(color: Colors.pinkAccent.shade100)
+                                                  border: Border.all(color: Colors.grey.shade300)
                                               ),
                                               child: Center(child: Text("-")),
                                             ),
@@ -110,7 +111,102 @@ class _MycartState extends State<Mycart> {
                                               height: 30.0,
                                               decoration: BoxDecoration(
                                                   borderRadius: BorderRadius.circular(8.0),
-                                                  border: Border.all(color: Colors.pinkAccent.shade100)
+                                                  border: Border.all(color: Colors.grey.shade300)
+                                              ),
+                                              child: Center(child: Text("+",)),
+                                            ),
+                                          ),
+                                        ],
+                                      )
+                                    ],
+                                  )
+
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+
+                    ),
+                    SizedBox(height: 20.0),
+                    Container(
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12.0),
+                          border: Border.all(color: Colors.grey.shade300)
+                      ),
+                      width: MediaQuery.of(context).size.width,
+                      height:140.0,
+                      padding: EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.grey.shade300,
+                              borderRadius: BorderRadius.circular(10.0),
+                              // border: Border.all(color: Colors.pinkAccent.shade100)
+                            ),
+                            width: 100.0,
+                            height: 100.0,
+                            child: Image.asset("img/iphone13.png"),
+                          ),
+                          SizedBox(width: 10,),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10.0),
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text("Apple Airpods Pro",style: TextStyle(fontWeight: FontWeight.bold),),
+                                      SizedBox(width: 30.0,),
+                                      Icon(Icons.close,color: Colors.grey,)
+                                    ],
+                                  ),
+                                  Text("Apple",style: TextStyle(color: Colors.grey.shade500),),
+                                  SizedBox(height: 20.0,),
+                                  Row(
+
+                                    children: [
+                                      Text("\$149.00",style: TextStyle(fontWeight: FontWeight.bold)),
+                                      SizedBox(width: 40.0,),
+                                      Row(
+                                        children: [
+                                          InkWell(
+                                            onTap: () {
+                                              setState(() {
+                                                number1--;
+                                              });
+
+                                            },
+                                            child: Container(
+                                              width: 30.0,
+                                              height: 30.0,
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(8.0),
+                                                  border: Border.all(color: Colors.grey.shade300)
+                                              ),
+                                              child: Center(child: Text("-")),
+                                            ),
+                                          ),
+                                          SizedBox(width: 10,),
+                                          Text(number1.toString()),
+                                          SizedBox(width: 10,),
+                                          InkWell(
+                                            onTap: () {
+                                              setState(() {
+                                                number1++;
+                                              });
+
+                                            },
+                                            child: Container(
+                                              width: 30.0,
+                                              height: 30.0,
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(8.0),
+                                                  border: Border.all(color: Colors.grey.shade300)
                                               ),
                                               child: Center(child: Text("+")),
                                             ),
@@ -132,7 +228,7 @@ class _MycartState extends State<Mycart> {
                     Container(
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(12.0),
-                          border: Border.all(color: Colors.red.shade100)
+                          border: Border.all(color: Colors.grey.shade300)
                       ),
                       width: MediaQuery.of(context).size.width,
                       height:140.0,
@@ -141,13 +237,13 @@ class _MycartState extends State<Mycart> {
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                              color: Colors.red.shade50,
+                              color: Colors.grey.shade300,
                               borderRadius: BorderRadius.circular(10.0),
                               // border: Border.all(color: Colors.pinkAccent.shade100)
                             ),
                             width: 100.0,
                             height: 100.0,
-                            child: Image.asset("img/iphone_13.PNG27.png"),
+                            child: Image.asset("img/iphone13.png"),
                           ),
                           SizedBox(width: 10,),
                           Padding(
@@ -164,7 +260,7 @@ class _MycartState extends State<Mycart> {
                                       Icon(Icons.close,color: Colors.grey,)
                                     ],
                                   ),
-                                  Text("Apple",style: TextStyle(color: Colors.pinkAccent.shade100),),
+                                  Text("Apple",style: TextStyle(color: Colors.grey.shade500),),
                                   SizedBox(height: 20.0,),
                                   Row(
 
@@ -176,100 +272,27 @@ class _MycartState extends State<Mycart> {
                                           InkWell(
                                             onTap: () {
                                               setState(() {
-                                                number2--;
+                                                number1--;
                                               });
+
                                             },
                                             child: Container(
                                               width: 30.0,
                                               height: 30.0,
                                               decoration: BoxDecoration(
                                                   borderRadius: BorderRadius.circular(8.0),
-                                                  border: Border.all(color: Colors.pinkAccent.shade100)
+                                                  border: Border.all(color: Colors.grey.shade300)
                                               ),
                                               child: Center(child: Text("-")),
                                             ),
                                           ),
                                           SizedBox(width: 10,),
-                                          Text(number2.toString()),
+                                          Text(number1.toString()),
                                           SizedBox(width: 10,),
                                           InkWell(
                                             onTap: () {
                                               setState(() {
-                                                number2++;
-                                              });
-                                            },
-                                            child: Container(
-                                              width: 30.0,
-                                              height: 30.0,
-                                              decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(8.0),
-                                                  border: Border.all(color: Colors.pinkAccent.shade100)
-                                              ),
-                                              child: Center(child: Text("+")),
-                                            ),
-                                          ),
-                                        ],
-                                      )
-                                    ],
-                                  )
-
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
-
-                    ),
-                    SizedBox(height: 20.0),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12.0),
-                          border: Border.all(color: Colors.red.shade100)
-                      ),
-                      width: MediaQuery.of(context).size.width,
-                      height:140.0,
-                      padding: EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Colors.red.shade50,
-                              borderRadius: BorderRadius.circular(10.0),
-                              // border: Border.all(color: Colors.pinkAccent.shade100)
-                            ),
-                            width: 100.0,
-                            height: 100.0,
-                            child: Image.asset("img/iphone_13.PNG27.png"),
-                          ),
-                          SizedBox(width: 10,),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 10.0),
-                            child: Container(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text("Apple Airpods Pro",style: TextStyle(fontWeight: FontWeight.bold),),
-                                      SizedBox(width: 30.0,),
-                                      Icon(Icons.close,color: Colors.grey,)
-                                    ],
-                                  ),
-                                  Text("Apple",style: TextStyle(color: Colors.pinkAccent.shade100),),
-                                  SizedBox(height: 20.0,),
-                                  Row(
-
-                                    children: [
-                                      Text("\$149.00",style: TextStyle(fontWeight: FontWeight.bold)),
-                                      SizedBox(width: 40.0,),
-                                      Row(
-                                        children: [
-                                          InkWell(
-                                            onTap: () {
-                                              setState(() {
-                                                number3--;
+                                                number1++;
                                               });
 
                                             },
@@ -278,27 +301,7 @@ class _MycartState extends State<Mycart> {
                                               height: 30.0,
                                               decoration: BoxDecoration(
                                                   borderRadius: BorderRadius.circular(8.0),
-                                                  border: Border.all(color: Colors.pinkAccent.shade100)
-                                              ),
-                                              child: Center(child: Text("-")),
-                                            ),
-                                          ),
-                                          SizedBox(width: 10,),
-                                          Text(number3.toString()),
-                                          SizedBox(width: 10,),
-                                          InkWell(
-                                            onTap: () {
-                                              setState(() {
-                                                number3++;
-                                              });
-
-                                            },
-                                            child: Container(
-                                              width: 30.0,
-                                              height: 30.0,
-                                              decoration: BoxDecoration(
-                                                  borderRadius: BorderRadius.circular(8.0),
-                                                  border: Border.all(color: Colors.pinkAccent.shade100)
+                                                  border: Border.all(color: Colors.grey.shade300)
                                               ),
                                               child: Center(child: Text("+")),
                                             ),
@@ -322,7 +325,7 @@ class _MycartState extends State<Mycart> {
                       children: [
                         Text("Sub-total",style: TextStyle(color: Colors.grey),),
                         Text("\$ 5,870",style: TextStyle(fontWeight: FontWeight.bold),)
-                        
+
                       ],
                     ),
                     SizedBox(height: 20,),
@@ -360,8 +363,8 @@ class _MycartState extends State<Mycart> {
                       width: MediaQuery.of(context).size.width,
                       height: 60.0,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(11.0),
-                        color: Colors.greenAccent.shade400
+                          borderRadius: BorderRadius.circular(11.0),
+                          color: Colors.greenAccent.shade400
                       ),
                       child: Padding(
                         padding: const EdgeInsets.only(left: 90.0),
